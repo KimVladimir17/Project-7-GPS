@@ -75,24 +75,24 @@ export const myVariable = 'Block 7';
 
 ### Почему точка входа именно `src/js/index.js`?
 
-Потому что мы указали это [здесь](https://github.com/Habsida-Projects/webpack-static-template/blob/a3c92947edf1eddc7fcaf1c776b5bdccf6f4f7df/webpack.config.js#L9).  
+Потому что мы указали это [здесь](https://github.com/Habsida-Projects/webpack-static-template-ru/blob/4bcd1091fd5988724f8a5989b4d9c9cf9c08afda/webpack.config.js#L9).  
 Вы можете поменять точку входа и переименовать/поменять файлы и посмотреть что произойдет.
 
 ---
 
 ### Почему точка входа для SCSS — `src/scss/style.scss`?
 
-Потому что мы [импортировали](https://github.com/Habsida-Projects/webpack-static-template/blob/a3c92947edf1eddc7fcaf1c776b5bdccf6f4f7df/src/js/index.js#L1) этот файл в JS.
+Потому что мы [импортировали](https://github.com/Habsida-Projects/webpack-static-template-ru/blob/4bcd1091fd5988724f8a5989b4d9c9cf9c08afda/src/js/index.js#L1) этот файл в JS.
 
 ---
 
 ### Как webpack понимает, что делать с `*.scss`?
 
-Это указано в [конфигурации](https://github.com/Habsida-Projects/webpack-static-template/blob/master/webpack.config.js#L36).  
-Так же обрабатываются [изображения](https://github.com/Habsida-Projects/webpack-static-template/blob/a3c92947edf1eddc7fcaf1c776b5bdccf6f4f7df/webpack.config.js#L56) и [шрифты](https://github.com/Habsida-Projects/webpack-static-template/blob/master/webpack.config.js#L46).
+Это указано в [конфигурации](https://github.com/Habsida-Projects/webpack-static-template-ru/blob/4bcd1091fd5988724f8a5989b4d9c9cf9c08afda/webpack.config.js#L36).  
+Так же обрабатываются [изображения](https://github.com/Habsida-Projects/webpack-static-template-ru/blob/4bcd1091fd5988724f8a5989b4d9c9cf9c08afda/webpack.config.js#L56) и [шрифты](https://github.com/Habsida-Projects/webpack-static-template-ru/blob/4bcd1091fd5988724f8a5989b4d9c9cf9c08afda/webpack.config.js#L47).
 
 ---
 
 ### Нужно ли настраивать Autoprefixer?
 
-Нет, мы уже [сделали это](https://github.com/Habsida-Projects/webpack-static-template/blob/a3c92947edf1eddc7fcaf1c776b5bdccf6f4f7df/package.json#L27) за вас.
+Нет, мы уже [сделали это](https://github.com/Habsida-Projects/webpack-static-template-ru/blob/4bcd1091fd5988724f8a5989b4d9c9cf9c08afda/package.json#L52) за вас.
