@@ -1,0 +1,154 @@
+$colorMainText: #1b1c21;
+$colorBackground: #f8f8f8;
+$colorInput: #b5b6bc;
+$colorWhite: #fff;
+$colorTextElem: #41f6d7;
+$colorTitle: #7e7e82;
+$colorActive: #B8FFEC;
+$colorBorder: #D9FFF5;
+$colorBtn: #FF3E79;
+$colorPipe: #EAEAEA;
+// EAEAEA 
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: $colorMainText;
+  font-weight: 500;
+}
+
+body {
+  background: $colorBackground;
+  font-size: 14px;
+  line-height: 24px;
+  color: $colorMainText;
+  font-family: 'TT Lakes Neue Trial';
+}
+
+::-webkit-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+input {
+  outline: none;
+}
+
+::-webkit-input-placeholder {
+  color: $colorInput;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+li::marker {
+  content: none;
+}
+
+.gps {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.conteiner {
+  max-width: 1120px;
+  width: 100%;
+  z-index: 2;
+}
+
+.row {
+  width: 100%;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
+.change-main-background {
+  &.active {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: $colorWhite;
+    opacity: 96.05%;
+    z-index: 6;
+    transition: 0.2s linear;
+  }
+}
+
+/* universal elem start */
+
+.elem-link {
+  display: flex;
+  align-items: center;
+  margin-top: 17px;
+}
+
+.elem-link img {
+  margin-right: 16px;
+}
+
+.elem-more-link,
+.elem-close-more-link {
+  display: none;
+}
+
+.elem-more-link.active,
+.elem-close-more-link.active {
+  display: block !important;
+}
+
+.title {
+  text-transform: uppercase;
+  border-top: 1px solid $colorBorder;
+  background: linear-gradient(to right, $colorBackground, $colorWhite);
+  padding: 15px 0;
+  margin: 51px 0 24px 0;
+}
+
+.title p {
+  margin: 0 auto;
+  max-width: 1120px;
+  padding: 0 15px;
+  color: $colorTitle;
+}
+
+.arrow-icon {
+  position: relative;
+  content: '';
+  width: 40px;
+  height: 40px;
+  border: 2px solid $colorBtn;
+  border-radius: 50%;
+  right: 0;
+}
+
+.arrow-icon::after {
+  content: '';
+  position: absolute;
+  width: 7px;
+  height: 2px;
+  background: $colorBtn;
+  top: 15px;
+  left: 15px;
+  rotate: 45deg;
+}
+
+.arrow-icon::before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 2px;
+  background: $colorBtn;
+  top: 20px;
+  right: 14px;
+  rotate: -45deg;
+}
+
+/* universal elem end */

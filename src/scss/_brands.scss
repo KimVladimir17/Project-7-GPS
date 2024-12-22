@@ -1,0 +1,89 @@
+@import './main.scss';
+
+.brands {
+  display: flex;
+  flex-direction: column;
+  &__logos {
+    display: grid;
+    row-gap: 16px;
+    &-block {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 32px;
+      row-gap: 16px;
+    }
+    &-item {
+      background: $colorWhite;
+      display: flex;
+      align-items: center;
+      height: 72px;
+      padding: 16px;
+      justify-content: space-between;
+    }
+  }
+  &__more {
+    width: 150px;
+  }
+  &__link {
+    display: none !important;
+  }
+}
+
+
+
+.tabsContentItem.active {
+  display: none !important;
+}
+
+.more-link-open.active {
+  display: block !important;
+}
+
+.more-link-close.active {
+  display: block !important;
+}
+
+.witdh-768 {
+  display: none;
+}
+
+
+
+
+/* Brands-swiper  */
+
+
+.brands__swiper,
+.kinds__swiper {
+    display: none;
+    overflow: hidden;
+}
+
+
+.brands__swiper-items>.brands__logos-item:first-child {
+    margin-left: 0;
+}
+
+
+
+.brands__swiper-items>.swiper-item {
+    width: 250px;
+    margin: 0 8px;
+    display: flex;
+    height: 72px;
+}
+
+
+.swiper-pagination-item {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.swiper-pagination-item .swiper-pagination-bullet {
+    background-color: #B5B6BC;
+    width: 12px;
+    height: 12px;
+    text-align: center;
+}
+
+

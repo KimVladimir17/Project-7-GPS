@@ -1,0 +1,40 @@
+@import './main.scss';
+
+.additional {
+  margin-top: 24px;
+  max-width: 421px;
+  line-height: 20px;
+  font-weight: 400;
+  margin-bottom: 50px;
+  &__link {
+    margin-top: 16px;
+    font-size: 16px;
+    display: flex;
+    font-weight: 600;
+  }
+  img {
+    color: $colorBtn;
+    margin-left: 9.4px;
+  }
+}
+
+.footer__content {
+  padding: 32px 0;
+  display: flex;
+  line-height: 16px;
+  color: $colorTitle;
+  justify-content: space-between;
+  border-top: 1px solid $colorBorder;
+  &-item {
+    &:first-child {
+      width: 218px;
+    }
+    &:nth-child(2) {
+      width: 214px;
+    }
+    &:last-child {
+      width: 330px;
+      text-align: end;
+    }
+  }
+}

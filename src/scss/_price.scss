@@ -1,0 +1,105 @@
+@import './main.scss';
+
+.price {
+  &__container {
+    padding: 23px 24px;
+    background: $colorWhite;
+    position: relative;
+    width: 100%;
+    &::after {
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      position: absolute;
+      background: $colorBackground;
+      z-index: 1;
+      height: 62px;
+    }
+    &-item {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $colorPipe;
+      padding: 16px 0;
+      align-items: center;
+      &:first-child {
+        padding-top: 0;
+        z-index: 2;
+        position: relative;
+        border-bottom: 0;
+        color: $colorTitle;
+        > .price__container-btn {
+          background: none;
+        }
+      }
+      &:last-child {
+        padding-bottom: 0;
+        border: 0;
+      }
+    }
+    &-tilte {
+      width: 348px;
+      line-height: 18px;
+      font-weight: 400;
+    }
+    &-price {
+      width: 74px;
+      line-height: 18px;
+      font-weight: 400;
+    }
+    &-time {
+      width: 81px;
+      line-height: 18px;
+      font-weight: 400;
+    }
+    &-btn {
+      background: $colorBtn;
+      border-radius: 16px;
+      color: $colorWhite;
+      padding: 4px 12px;
+      width: 119px;
+      display: flex;
+      line-height: 24px;
+      font-size: 12px;
+      justify-content: space-between;
+      text-transform: uppercase;
+      font-weight: 600;
+      height: 32px;
+      img {
+        margin-right: 7px;
+        width: 7px;
+      }
+    }
+  }
+  &__swiper {
+    overflow: hidden;
+    display: none;
+    &-item {
+      padding: 16px;
+      width: 260px !important;
+      height: 200px !important;
+      margin-right: 16px;
+      background: $colorWhite;
+      line-height: 18px;
+      &:last-child {
+        margin: 0;
+      }
+      h4 {
+        color: $colorTitle;
+        font-weight: 400;
+      }
+      > .price__swiper-text:nth-child(3) {
+        margin-bottom: 0 !important;
+      }
+    }
+    &-text {
+      margin-bottom: 16px;
+    }
+    &-btn {
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+    }
+  }
+}

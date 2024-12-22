@@ -1,0 +1,33 @@
+@import './main.scss';
+
+.kinds {
+  &__services {
+    display: grid;
+    row-gap: 32px;
+    &-block {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+    }
+    &-item {
+      height: 160px;
+      background: $colorWhite;
+      position: relative;
+      > .arrow-icon {
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+      }
+    }
+    &-title {
+      margin: 16px 0 0 16px;
+      font-weight: 600;
+    }
+  }
+  &__swiper-items > .swiper-item {
+    width: 240px;
+    height: 160px;
+    margin-right: 16px;
+  }
+}
+

@@ -1,0 +1,84 @@
+@import './main.scss';
+
+.form {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background: $colorWhite;
+  padding: 40px 32px;
+  max-width: 440px;
+  border-left: 1px solid $colorBorder;
+  margin-left: 50px;
+  box-shadow: -2px 0px 4px 0px #454f7e05, 16px 0px 52px 0px #0e185033;
+  display: flex;
+  flex-direction: column;
+  &__message {
+    opacity: 0;
+    z-index: -1;
+    transition: 0.1s linear;
+    &.active {
+      opacity: 1;
+      z-index: 9;
+    }
+  }
+  &__call {
+    opacity: 0;
+    z-index: -1;
+    transition: 0.1s linear;
+    &.active {
+      opacity: 1;
+      z-index: 9;
+    }
+  }
+  &__title {
+    margin-bottom: 24px;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: bold;
+    letter-spacing: -0.6px;
+    position: relative;
+    &::after {
+      content: '';
+      width: 4px;
+      height: 40px;
+      border-radius: 4px;
+      left: -35px;
+      top: 0;
+      position: absolute;
+      background: $colorTextElem;
+    }
+  }
+  &__conteiner {
+    display: flex;
+    flex-direction: column;
+    input {
+      width: 376px;
+      height: 48px;
+      border: 1px solid $colorPipe;
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 16px;
+    }
+  }
+}
+
+
+.form__text,
+.form__conteiner input {
+  margin-bottom: 16px;
+}
+
+.form__text span {
+  color: $colorBtn;
+}
+
+.form-img {
+  position: absolute;
+  left: -72px;
+  top: 32px;
+}
+
+.form__btn {
+  align-self: flex-end;
+}

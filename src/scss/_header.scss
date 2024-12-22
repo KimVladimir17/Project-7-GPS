@@ -1,0 +1,87 @@
+@import './main.scss';
+
+.header {
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 24px;
+    &-name {
+      position: relative;
+      font-size: 28px;
+      line-height: 40px;
+      &::after {
+        position: absolute;
+        content: '';
+        width: 6px;
+        height: 40px;
+        background: $colorTextElem;
+        top: 0;
+        left: -28px;
+        border-radius: 15px;
+      }
+    }
+    &-items {
+      display: flex;
+    }
+    &-icon {
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      &:first-child {
+        margin-right: 32px;
+      }
+      > .nav-item {
+        margin-left: 16px;
+      }
+    }
+  }
+  &__services {
+    margin-top: 8px;
+    &-list {
+      display: flex;
+      flex-flow: row wrap;
+    }
+    &-name {
+      min-width: max-content;
+      padding: 8px 16.54px;
+      color: $colorTitle;
+      &.active {
+        border: 2px solid $colorActive;
+        background: $colorWhite;
+        border-radius: 6px;
+      }
+    }
+  }
+}
+
+.header__info {
+  margin-top: 16px;
+  &-items {
+    max-width: 100%;
+    display: flex;
+  }
+  &-elem {
+    width: 50%;
+  }
+  &-text {
+    margin-right: 48px;
+    line-height: 20px;
+    > .span-1 {
+      display: none;
+    }
+    > .span-2 {
+      display: block;
+      margin-top: 25px;
+    }
+  }
+  &-img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+}
+
+.header-picture2,
+.header-picture3 {
+  display: none;
+}

@@ -1,3 +1,10 @@
-import '../scss/style.scss'
-
-console.log('It works!')
+import '../scss/main.scss';
+import '../scss/_form.scss';
+import '../scss/_nav.scss';
+import '../scss/_header.scss';
+import '../scss/_brands.scss';
+import '../scss/_kinds.scss';
+import '../scss/_price.scss';
+import '../scss/_footer.scss';
+import '../scss/_adaptive.scss';
+import '../js/script';

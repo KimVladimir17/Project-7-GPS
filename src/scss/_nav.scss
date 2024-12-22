@@ -1,0 +1,147 @@
+@import './main.scss';
+
+.nav {
+  &__list {
+    top: 0;
+    left: 0;
+    background: $colorWhite;
+    height: 100vh;
+    z-index: 6;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    transition: 0.2s linear;
+    position: sticky;
+
+    &.active {
+      transform: translateX(0);
+    }
+    &-icons {
+      display: flex;
+      align-items: center;
+      padding: 24px;
+    }
+    &-contacts {
+      padding: 0 24px;
+      margin-top: 241px;
+    }
+    &-link {
+      margin-top: 28px;
+    }
+  }
+
+  &-tel {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  &-lang {
+    color: $colorMainText;
+    margin-right: 8px;
+    line-height: 24px;
+    font-size: 16px;
+    cursor: pointer;
+    &.active {
+      color: $colorTitle;
+    }
+  }
+  &-left,
+  &-right {
+    display: flex;
+    align-items: center;
+  }
+  &-log {
+    width: 96.55px;
+    height: 50.81px;
+    > img {
+      width: 100%;
+    }
+  }
+  &-item {
+    width: 40px;
+    height: 40px;
+  }
+  &-pipe {
+    margin: 0 20px;
+    width: 2px;
+    height: 32px;
+    border-radius: 1px;
+    background: $colorPipe;
+  }
+
+  &__contacts {
+    &-item {
+      display: flex;
+      margin-bottom: 16px;
+    }
+    &-lang {
+      margin-top: 24px;
+      display: flex;
+    }
+  }
+  &-link {
+    padding: 0 24px;
+    margin: 32px 0;
+    position: relative;
+    line-height: 24px;
+    font-size: 16px;
+    cursor: pointer;
+    width: max-content;
+    font-weight: 600;
+    &:first-child {
+      margin-top: 0;
+    }
+    &.active {
+      color: $colorTitle;
+      &::after {
+        border-right: 5px solid $colorTextElem;
+      }
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      width: 5px;
+      height: 100%;
+      left: -6px;
+      top: 0;
+      border-radius: 5px;
+    }
+  }
+}
+
+.nav-burger-close {
+  display: none;
+}
+
+.nav__icon-item {
+  margin: 0 16px 0 0;
+}
+
+.nav__list-icons > .nav__icon-item:last-child {
+  margin: 0;
+  position: absolute;
+  right: 24px;
+}
+
+
+
+.nav-right > .nav-item {
+  margin-right: 16px;
+}
+
+.nav-right > .nav-item:nth-of-type(3),
+.nav-right > .nav-item:last-child {
+  margin: 0;
+}
+
+.header__nav {
+  justify-content: space-between;
+  background: $colorWhite;
+  padding: 24px 16px;
+  display: none;
+  width: 100%;
+  position: fixed;
+  border-bottom: 1px solid $colorBorder;
+  z-index: 4;
+}
