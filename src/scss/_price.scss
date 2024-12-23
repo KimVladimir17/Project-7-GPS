@@ -1,4 +1,4 @@
-@import './main.scss';
+@import './_variables';
 
 .price {
   &__container {
@@ -18,11 +18,10 @@
     }
     &-item {
       width: 100%;
-      display: flex;
       justify-content: space-between;
+      @include flexAlignCenter;
       border-bottom: 1px solid $colorPipe;
       padding: 16px 0;
-      align-items: center;
       &:first-child {
         padding-top: 0;
         z-index: 2;

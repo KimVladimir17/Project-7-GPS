@@ -1,4 +1,4 @@
-@import './main.scss';
+@import './_variables';
 
 .brands {
   display: flex;
@@ -14,8 +14,7 @@
     }
     &-item {
       background: $colorWhite;
-      display: flex;
-      align-items: center;
+      @include flexAlignCenter;
       height: 72px;
       padding: 16px;
       justify-content: space-between;

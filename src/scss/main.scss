@@ -1,15 +1,4 @@
-$colorMainText: #1b1c21;
-$colorBackground: #f8f8f8;
-$colorInput: #b5b6bc;
-$colorWhite: #fff;
-$colorTextElem: #41f6d7;
-$colorTitle: #7e7e82;
-$colorActive: #B8FFEC;
-$colorBorder: #D9FFF5;
-$colorBtn: #FF3E79;
-$colorPipe: #EAEAEA;
-// EAEAEA 
-
+@import './_variables';
 
 * {
   margin: 0;
@@ -29,6 +18,9 @@ body {
   line-height: 24px;
   color: $colorMainText;
   font-family: 'TT Lakes Neue Trial';
+  &.lock {
+    overflow: hidden;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -44,18 +36,13 @@ input {
   color: $colorInput;
 }
 
-body.lock {
-  overflow: hidden;
-}
-
 li::marker {
   content: none;
 }
 
 .gps {
   width: 100%;
-  display: flex;
-  justify-content: center;
+  @include flexJustifyCenter;
 }
 
 .conteiner {
@@ -85,13 +72,11 @@ li::marker {
 /* universal elem start */
 
 .elem-link {
-  display: flex;
-  align-items: center;
+  @include flexAlignCenter;
   margin-top: 17px;
-}
-
-.elem-link img {
-  margin-right: 16px;
+  img {
+    margin-right: 16px;
+  }
 }
 
 .elem-more-link,
@@ -110,13 +95,12 @@ li::marker {
   background: linear-gradient(to right, $colorBackground, $colorWhite);
   padding: 15px 0;
   margin: 51px 0 24px 0;
-}
-
-.title p {
-  margin: 0 auto;
-  max-width: 1120px;
-  padding: 0 15px;
-  color: $colorTitle;
+  p {
+    margin: 0 auto;
+    max-width: 1120px;
+    padding: 0 15px;
+    color: $colorTitle;
+  }
 }
 
 .arrow-icon {
@@ -127,28 +111,26 @@ li::marker {
   border: 2px solid $colorBtn;
   border-radius: 50%;
   right: 0;
-}
-
-.arrow-icon::after {
-  content: '';
-  position: absolute;
-  width: 7px;
-  height: 2px;
-  background: $colorBtn;
-  top: 15px;
-  left: 15px;
-  rotate: 45deg;
-}
-
-.arrow-icon::before {
-  content: '';
-  position: absolute;
-  width: 8px;
-  height: 2px;
-  background: $colorBtn;
-  top: 20px;
-  right: 14px;
-  rotate: -45deg;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 2px;
+    background: $colorBtn;
+    top: 15px;
+    left: 15px;
+    rotate: 45deg;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    background: $colorBtn;
+    top: 20px;
+    right: 14px;
+    rotate: -45deg;
+  }
 }
 
 /* universal elem end */

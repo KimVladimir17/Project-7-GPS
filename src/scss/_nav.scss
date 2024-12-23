@@ -1,4 +1,4 @@
-@import './main.scss';
+@import './_variables';
 
 .nav {
   &__list {
@@ -18,8 +18,7 @@
       transform: translateX(0);
     }
     &-icons {
-      display: flex;
-      align-items: center;
+      @include flexAlignCenter;
       padding: 24px;
     }
     &-contacts {
@@ -48,8 +47,7 @@
   }
   &-left,
   &-right {
-    display: flex;
-    align-items: center;
+    @include flexAlignCenter;
   }
   &-log {
     width: 96.55px;
@@ -108,23 +106,20 @@
       border-radius: 5px;
     }
   }
+  &-burger-close {
+    display: none;
+  }
+  &__icon-item {
+    margin: 0 16px 0 0;
+  }
 }
 
-.nav-burger-close {
-  display: none;
-}
-
-.nav__icon-item {
-  margin: 0 16px 0 0;
-}
 
 .nav__list-icons > .nav__icon-item:last-child {
   margin: 0;
   position: absolute;
   right: 24px;
 }
-
-
 
 .nav-right > .nav-item {
   margin-right: 16px;

@@ -1,4 +1,4 @@
-@import './main.scss';
+@import './_variables';
 
 .header {
   &__title {
@@ -24,8 +24,7 @@
       display: flex;
     }
     &-icon {
-      display: flex;
-      align-items: center;
+      @include flexAlignCenter;
       font-weight: 500;
       &:first-child {
         margin-right: 32px;

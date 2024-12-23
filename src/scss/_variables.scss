@@ -1,0 +1,20 @@
+$colorMainText: #1b1c21;
+$colorBackground: #f8f8f8;
+$colorInput: #b5b6bc;
+$colorWhite: #fff;
+$colorTextElem: #41f6d7;
+$colorTitle: #7e7e82;
+$colorActive: #B8FFEC;
+$colorBorder: #D9FFF5;
+$colorBtn: #FF3E79;
+$colorPipe: #EAEAEA;
+
+@mixin flexJustifyCenter{
+    display: flex;
+    justify-content: center;
+};
+
+@mixin flexAlignCenter{
+    display: flex;
+    align-items: center;
+}

@@ -1,4 +1,4 @@
-@import './main.scss';
+@import './_variables';
 
 @media (320px <=width <=1440px) {
   .change-main-background.active {
@@ -123,29 +123,26 @@
     margin-top: 0px;
   }
 
-
-  
   .contact-item {
     display: none;
   }
 
-  .header__info-items {
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .header__info-elem {
-    width: 100%;
-  }
-
-  .header-info-text {
-    margin-right: 0;
-    line-height: 18px;
-  }
-
-  .header-info-text > .span-1 {
-    display: none;
+  .header__info {
+    &-items {
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    &-elem {
+      width: 100%;
+    }
+    &-text {
+      margin-right: 0;
+      line-height: 18px;
+      > .span-1 {
+        display: none;
+      }
+    }
   }
 
   .elem-link {
@@ -203,15 +200,13 @@
     padding: 16px 0;
     flex-direction: column;
     align-items: center;
-  }
-
-  .footer__content-item {
-    text-align: center !important;
-    margin-bottom: 16px;
-    width: 100% !important;
-  }
-
-  .footer__content-item:last-child {
-    margin: 0;
+    &-item {
+      text-align: center !important;
+      margin-bottom: 16px;
+      width: 100% !important;
+      &:last-child {
+        margin: 0;
+      }
+    }
   }
 }
