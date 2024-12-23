@@ -1,4 +1,5 @@
 import '../scss/main.scss';
+import '../scss/_variables.scss';
 import '../scss/_form.scss';
 import '../scss/_nav.scss';
 import '../scss/_header.scss';
